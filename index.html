@@ -4,10 +4,76 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-
-
+<!-- this is a navagation bar -->
+	<nav>
+		<ul class="nav">
+			<li class="setBar"><a href="#">View Music</a></li>
+			<li class="setBar"><a href="#">Add Music</a></li>
+			<li><a href="#">Profile</a></li>
+		</ul>
+	</nav>
+<!-- this is the options div for song choices -->
+	<div class="options">
+		<div>
+			<label for="Song Length">Song Length:
+				<input type="range" name="Song Length">
+			</label>
+		</div>
+		<div>
+			<label for="Artist">Artist:
+				<select name="Artist">
+					<option value="Artist 1">Artist 1</option>
+					<option value="Artist 2">Artist 2</option>
+					<option value="Artist 3">Artist 3</option>
+					<option value="Artist 4">Artist 4</option>
+					<option value="Artist 5">Artist 5</option>
+				</select>
+			</label>
+		</div>
+		<div>
+			<label for="Albulm">Albulm:
+				<select name="Albulm">
+					<option value="Albulm 1">Albulm 1</option>
+					<option value="Albulm 2">Albulm 2</option>
+					<option value="Albulm 3">Albulm 3</option>
+					<option value="Albulm 4">Albulm 4</option>
+					<option value="Albulm 5">Albulm 5</option>
+				</select>
+			</label>
+		</div>
+		<div class="checkBox">
+			<p class="genre">Genre:</p>
+			<!-- for column checkboxes -->
+			<div class="checkBoxLeft"> 
+				<label><input type="checkbox" name="Genres" value="Rock">Rock</label>
+				<label><input type="checkbox" name="Genres" value="Pop">Pop</label>
+				<label><input type="checkbox" name="Genres" value="Blues">Blues</label>
+			</div>
+			<div class="checkBoxRight">	
+				<label><input type="checkbox" name="Genres" value="Classical">Classical</label>
+				<label><input type="checkbox" name="Genres" value="Jazz">Jazz</label>
+				<label><input type="checkbox" name="Genres" value="Hip Hop">Hip Hop</label>
+			</div>	
+			</label>
+		</div>
+		<div class="button">
+			<button name="Filter">Filter</button>
+		</div>
+	</div>	
+<!-- this is the song name div -->
+	<fieldset>
+		<div class="titleTrack">Song Name</div>
+			<p>Artist Name | Album name | Genre</p>
+		<div class="titleTrack">Song Name</div>
+			<p>Artist Name | Album name | Genre</p>
+		<div class="titleTrack">Song Name</div>
+			<p>Artist Name | Album name | Genre</p>
+		<div class="titleTrack">Song Name</div>
+			<p>Artist Name | Album name | Genre</p>
+	</fieldset>		
 </body>
 </html>
