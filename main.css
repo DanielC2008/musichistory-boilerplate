@@ -1,0 +1,83 @@
+/*elements*/
+
+nav {
+	background-color: #FFB4B0;
+	border: 2px solid black;
+	height: 50px;	
+}
+
+fieldset {	
+	background-color: #FEFAC0;
+	overflow: hidden;
+	height: 450px;
+	margin: 4px	;
+	border: 2px solid black;
+	border-box: box-sizing;
+	padding: 0 12px;
+}
+
+/*classes*/
+
+/*nav classes*/
+.nav li {
+	text-decoration: none;
+	float: left;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.setBar:after {
+	content:"|";
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/*OPTIONS CLASSES*/
+
+.options {
+	background-color: #4DD7FA;
+	border: 2px solid black;
+	width: 305px;
+	height: 450px;
+	margin: 4px;
+	float: left;
+	border-box: box-sizing;
+}
+
+.options :nth-child(n) {
+	margin: 10px;
+}
+
+.genre {
+	display: block;
+} 
+
+/*input[type="checkbox"] {
+	display: block;
+}*/
+
+.checkBoxLeft {
+	margin: 10px;
+	width: 120px;
+	display: inline-block;
+}
+
+.checkBoxRight {
+	margin: 10px;	
+	width: 120px;
+	display: inline-block;
+}
+
+.button {
+	text-align: center;
+	/*margin-top: 20px; RESUME HERE*/
+}
+
+
+/*SONG NAME CLASSES*/
+
+.titleTrack {
+	font-size: 2em;
+	color: #785616;
+}
+
