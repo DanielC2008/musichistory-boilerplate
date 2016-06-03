@@ -41,3 +41,13 @@ Visit the [Music History mockup](https://moqups.com/chortlehoort/1E8LJX7r/) that
 ## Completing
 
 Once you are done, make sure you add your files to git, make a commit, and then push your new code up to Github with the following command `git push origin master`.
+
+
+Version 2
+====== 
+
+Working with arrays-  
+1. Removed unwanted elements from an array of strings.  
+1. Separated name of element from the rest of the string.  
+1. Printed songs to main div.
+
