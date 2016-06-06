@@ -51,3 +51,11 @@ Working with arrays-
 1. Separated name of element from the rest of the string.  
 1. Printed songs to main div.
 
+Version 4 
+======
+Working with event handlers and xhr requests
+1. added an xhr request to load songs to the page
+1. created a button that deletes songs
+1. created new button to get new songs
+1. appends new songs to the main div
+
