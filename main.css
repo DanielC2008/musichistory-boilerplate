@@ -105,6 +105,12 @@ fieldset {
 	color: tomato;
 }
 
+.addInput {
+	display: inline-block;
+	padding: 10px;
+	float: left;
+	margin: 20px 45px;
+}
 
 /*id's*/
 
@@ -113,5 +119,20 @@ fieldset {
 	margin-top: 5px;
 
 }
+
+#addSongDiv {
+	width: 250px;
+	height: 300px;
+	margin: 50px auto;
+	border: 3px solid grey;
+}
+
+#add {
+	display: inline-block;
+	padding: 10px;
+	float: left;
+	margin: 10px 85px;
+}
+
 
 
