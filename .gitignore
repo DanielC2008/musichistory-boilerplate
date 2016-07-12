@@ -2,3 +2,5 @@
 .sublime-gulp.cache 
 gulpfile.js 
 MIT.LICENSE 
+package.json
+dist/
