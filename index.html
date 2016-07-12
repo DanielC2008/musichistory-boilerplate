@@ -11,8 +11,8 @@
 <!-- this is a navagation bar -->
 	<nav>
 		<ul class="nav">
-			<li class="setBar"><a href="index.html">View Music</a></li>
-			<li class="setBar"><a href="addMusic.html">Add Music</a></li>
+			<li id="viewMusic" class="setBar">View Music</li>
+			<li id="viewAddMusic" class="setBar">Add Music</li>
 			<li><a href="#">Profile</a></li>
 		</ul>
 		<button id="needMoreSongs" type="button">Need More Songs? --></button>
@@ -66,10 +66,18 @@
 		</div>
 	</div>	
 	<fieldset id="nameDiv">
+	</fieldset>
+	<fieldset id="viewDiv">
+		<div id="addSongDiv">
+			<input id="addSong" class="addInput" placeholder="Add Song">
+			<input id="addArtist" class="addInput" placeholder="Add Artist">
+			<input id="addAlbum" class="addInput" placeholder="Add Albulm">
+			<button id="add">ADD IT!</button>
+		</div>
 	</fieldset>	
 
 	 
 	<script src="node_modules\jquery\dist\jquery.min.js"></script>	
-	<script src="src\xhr.js"></script>	
+	<script src="dist/bundle.js"></script>	
 </body>
 </html>
