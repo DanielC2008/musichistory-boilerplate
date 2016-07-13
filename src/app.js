@@ -2,8 +2,7 @@
 
 const xhr = require("./xhr");
 const domHandler = require("./domHandler");
-const addSongs = require("./addSongs");
-const deleteBtn = require("./deleteBtn");
+const manipulateSongs = require("./manipulateSongs");
 
 ///////////HANDLE VIEW///////////
 $("#viewDiv").hide();
@@ -12,9 +11,8 @@ $("#viewMusic").click(domHandler.viewMusic);
 ///////////MORE SONGS///////////
 $("#needMoreSongs").click(xhr.getMoreSongs);
 ///////////DELETE SONGS///////////
-$(document).on("click", ".deleteButtons", deleteBtn);
+$(document).on("click", ".deleteButtons", manipulateSongs.deleteBtn);
 ///////////ADD SONGS///////////
-$("#add").click(addSongs.addSongs);
+$("#add").click(manipulateSongs.addSongs);
 ///////////FILTER SONGS//////////
-// $("#filterBtn").prop("disabled", true);
-$("#filterBtn").click(addSongs.filterArtist);
+$("#filterBtn").click(manipulateSongs.filterArtist);
