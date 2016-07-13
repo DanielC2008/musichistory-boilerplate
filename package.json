@@ -23,5 +23,8 @@
     "jquery": "^3.0.0",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
   }
 }
