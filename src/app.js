@@ -16,4 +16,5 @@ $(document).on("click", ".deleteButtons", deleteBtn);
 ///////////ADD SONGS///////////
 $("#add").click(addSongs.addSongs);
 ///////////FILTER SONGS//////////
-$("#filterBtn").click(addSongs.filterSongs);
+// $("#filterBtn").prop("disabled", true);
+$("#filterBtn").click(addSongs.filterArtist);

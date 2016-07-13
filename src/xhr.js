@@ -2,6 +2,7 @@
 
 const domHandler = require("./domHandler");
 let songArr = [];
+let filterArr = [];
 
 
 // Create an XHR request
@@ -24,8 +25,10 @@ function codeError() {
 function storeSongs(data) {
 	data.songs.forEach(function(curr) {
 		songArr.push(curr);
+		filterArr.push(curr);
 	});
 	domHandler.displaySongs(songArr);
+	domHandler.filterSelect(filterArr);
 } 
 
-module.exports = {getMoreSongs, songArr};
+module.exports = {getMoreSongs, songArr, filterArr};
