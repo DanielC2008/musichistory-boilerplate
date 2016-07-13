@@ -134,6 +134,11 @@ fieldset {
 	margin: 10px 85px;
 }
 
+.setBar {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
 
 
 

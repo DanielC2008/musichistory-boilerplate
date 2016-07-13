@@ -8,7 +8,12 @@ const deleteBtn = require("./deleteBtn");
 ///////////HANDLE VIEW///////////
 $("#viewDiv").hide();
 $("#viewAddMusic").click(domHandler.viewAddMusic);
-$("#viewMusic").click(domHandler.viewMusic)
+$("#viewMusic").click(domHandler.viewMusic);
+///////////MORE SONGS///////////
 $("#needMoreSongs").click(xhr.getMoreSongs);
+///////////DELETE SONGS///////////
 $(document).on("click", ".deleteButtons", deleteBtn);
-$("#add").click(addSongs);
+///////////ADD SONGS///////////
+$("#add").click(addSongs.addSongs);
+///////////FILTER SONGS//////////
+$("#filterBtn").click(addSongs.filterSongs);

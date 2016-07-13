@@ -13,7 +13,7 @@
 		<ul class="nav">
 			<li id="viewMusic" class="setBar">View Music</li>
 			<li id="viewAddMusic" class="setBar">Add Music</li>
-			<li><a href="#">Profile</a></li>
+			<!-- <li><a href="#">Profile</a></li> -->
 		</ul>
 		<button id="needMoreSongs" type="button">Need More Songs? --></button>
 	</nav>
@@ -26,23 +26,15 @@
 		</div>
 		<div>
 			<label for="Artist">Artist:
-				<select name="Artist">
-					<option value="Artist 1">Artist 1</option>
-					<option value="Artist 2">Artist 2</option>
-					<option value="Artist 3">Artist 3</option>
-					<option value="Artist 4">Artist 4</option>
-					<option value="Artist 5">Artist 5</option>
+				<select id="artistSelect" name="Artist">
+					<option value="" disabled selected>Filter By Artist</option>
 				</select>
 			</label>
 		</div>
 		<div>
 			<label for="Albulm">Albulm:
-				<select name="Albulm">
-					<option value="Albulm 1">Albulm 1</option>
-					<option value="Albulm 2">Albulm 2</option>
-					<option value="Albulm 3">Albulm 3</option>
-					<option value="Albulm 4">Albulm 4</option>
-					<option value="Albulm 5">Albulm 5</option>
+				<select id="albumSelect" name="Albulm">
+					<option value="" disabled selected>Filter By Album</option>
 				</select>
 			</label>
 		</div>
@@ -62,7 +54,7 @@
 			</label>
 		</div>
 		<div class="button">
-			<button name="Filter">Filter</button>
+			<button id="filterBtn" name="Filter">Filter</button>
 		</div>
 	</div>	
 	<fieldset id="nameDiv">
