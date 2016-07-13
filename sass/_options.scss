@@ -1,0 +1,33 @@
+.options {
+	background-color: #4DD7FA;
+	border: 2px solid black;
+	width: 305px;
+	height: 450px;
+	margin: 4px;
+	float: left;
+	border-box: box-sizing;
+
+	:nth-child(n) {
+	margin: 10px;
+	}
+}
+
+.genre {
+	display: block;
+} 
+
+.checkBoxLeft {
+	margin: 10px;
+	width: 120px;
+	display: inline-block;
+}
+
+.checkBoxRight {
+	margin: 10px;	
+	width: 120px;
+	display: inline-block;
+}
+
+.button {
+	text-align: center;
+}
