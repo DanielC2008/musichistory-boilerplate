@@ -1,5 +1,8 @@
+@import "nav";
+
 .songDiv {
 	margin: 20px 5px;
+	border-bottom: 1px dashed burlywood;
 }
 
 .titleTrack {
@@ -25,7 +28,7 @@
 
 .deleteButtons {
 	float: right;
-	color: tomato;
+	@extend %burlywood;
 }
 
 .addInput {

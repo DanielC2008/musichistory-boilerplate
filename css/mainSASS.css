@@ -1,0 +1,124 @@
+#needMoreSongs, .deleteButtons, #filterBtn {
+  background-color: burlywood; }
+
+.navbar-default {
+  margin: 0 20px;
+  background-color: #FFB4B0;
+  border: 2px solid black; }
+  .navbar-default .seperator {
+    display: inline-block;
+    margin: 2px 0;
+    margin-top: 45px;
+    padding: 0; }
+
+.setBar {
+  font-size: 1.5rem;
+  margin-top: 45px;
+  display: inline-block;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0; }
+
+#needMoreSongs {
+  margin: 40px 0 0 10px;
+  float: right; }
+
+.songDiv {
+  margin: 20px 5px;
+  border-bottom: 1px dashed burlywood; }
+
+.titleTrack {
+  font-size: 1.5em;
+  color: #785616;
+  margin-top: 10px 0 10px 0; }
+
+.artist {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  font-size: 1.25rem;
+  color: black; }
+
+.album {
+  margin: 0;
+  padding-left: 5px;
+  display: inline-block;
+  font-size: 1.25rem;
+  color: black; }
+
+.deleteButtons {
+  float: right; }
+
+.addInput {
+  display: inline-block;
+  padding: 10px;
+  float: left;
+  margin: 20px 45px; }
+
+#needMoreSongs, .deleteButtons, #filterBtn {
+  background-color: burlywood; }
+
+.navbar-default {
+  margin: 0 20px;
+  background-color: #FFB4B0;
+  border: 2px solid black; }
+  .navbar-default .seperator {
+    display: inline-block;
+    margin: 2px 0;
+    margin-top: 45px;
+    padding: 0; }
+
+.setBar {
+  font-size: 1.5rem;
+  margin-top: 45px;
+  display: inline-block;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0; }
+
+#needMoreSongs {
+  margin: 40px 0 0 10px;
+  float: right; }
+
+.options {
+  height: 450px;
+  margin: 5px 15px 0 0;
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  border-box: box-sizing; }
+  .options :nth-child(n) {
+    margin: 4px; }
+
+input {
+  display: inline-block; }
+
+.genre {
+  display: block; }
+
+.checkBoxLeft, .checkBoxRight {
+  padding: 0;
+  height: 100px;
+  margin: 10px;
+  display: inline-block; }
+
+fieldset {
+  background-color: #FEFAC0;
+  overflow: hidden;
+  height: 450px;
+  margin: 4px;
+  border: 2px solid black;
+  border-box: box-sizing;
+  padding: 0 12px; }
+
+#addSongDiv {
+  width: 250px;
+  height: 300px;
+  margin: 50px auto;
+  border: 3px solid grey; }
+
+#add {
+  display: inline-block;
+  padding: 10px;
+  float: left;
+  margin: 10px 85px; }

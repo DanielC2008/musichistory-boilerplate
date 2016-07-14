@@ -1,27 +1,32 @@
-nav {
-	background-color: #FFB4B0;
-	border: 2px solid black;
-	height: 50px;	
-
+%burlywood{
+	background-color: burlywood;
 }
 
-.setBar:after {
-	content:"|";
-	display: inline-block;
-	margin-left: 10px;
+.navbar-default {
+	margin: 0 20px;
+	background-color: #FFB4B0;
+	border: 2px solid black;
+
+	.seperator {
+		display: inline-block;
+		margin: 2px 0;
+		margin-top: 45px;
+		padding: 0;
+	}
 }
 
 .setBar {
-	margin-left: 10px;
+	font-size: 1.5rem;
+	margin-top: 45px;
 	display: inline-block;
-	float: left;
 	color: blue;
 	text-decoration: underline;
 	cursor: pointer;
+	padding: 0;
 }
 
 #needMoreSongs {
+	margin: 40px 0 0 10px;
 	float: right;
-	margin-top: 5px;
-
+	@extend %burlywood
 }
