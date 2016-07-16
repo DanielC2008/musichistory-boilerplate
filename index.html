@@ -10,21 +10,27 @@
 
 <body>
 <!-- this is a navagation bar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-	  <div class="row">
-			<div id="viewMusic" class="setBar col-md-1">View Music</div>
-			<div id="viewAddMusic" class="setBar col-md-1">Add Music</div>
-			<!-- <li><a href="#">Profile</a></li> -->
-			<button id="needMoreSongs" type="button">Need More Songs? --></button>
-	  </div>
-  </div>
-</nav>
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-default col-sm-11">
+			  <div class="container">
+				  <div class="row">
+						<div id="viewMusic" class="setBar col-sm-1">View Music</div>
+						<div id="viewAddMusic" class="setBar col-sm-1">Add Music</div>
+						<!-- <li><a href="#">Profile</a></li> -->
+						<div class="col-sm-offset-9">
+							<button id="needMoreSongs" type="button">More Songs</button>
+						</div>
+				  </div>
+			  </div>
+			</nav>
+		</div>	
+	</div>
 <!-- this is the options div for song choices -->
 <!-- BOOTSTRAP HERE -->
 	<div class="container">
 		<div class="row">
-			<div class="options col-md-4"> 
+			<div class="options col-sm-4"> 
 				<div>
 					<label for="Song Length">Song Length:
 						<input type="range" name="Song Length">
@@ -49,12 +55,12 @@
 						<div class="checkBox">
 							<p class="genre">Genre:</p>
 							<!-- for column checkboxes -->
-							<div class="checkBoxLeft col-md-1"> 
+							<div class="checkBoxLeft col-sm-1"> 
 								<label><input type="checkbox" name="Genres" value="Rock">Rock</label>
 								<label><input type="checkbox" name="Genres" value="Pop">Pop</label>
 								<label><input type="checkbox" name="Genres" value="Blues">Blues</label>
 							</div>
-							<div class="checkBoxRight col-md-2">	
+							<div class="checkBoxRight col-sm-2">	
 								<label><input type="checkbox" name="Genres" value="Classical">Classical</label>
 								<label><input type="checkbox" name="Genres" value="Jazz">Jazz</label>
 								<label><input type="checkbox" name="Genres" value="Hip Hop">Hip Hop</label>
@@ -64,11 +70,11 @@
 				</div>	
 				  <div class="container">
 	  				<div class="row">
-						<button id="filterBtn"  class="col-md-3" name="Filter">Filter</button>
+						<button id="filterBtn"  class="col-sm-3" name="Filter">Filter</button>
 						</div>
 					</div>
 			</div>
-			<fieldset id="nameDiv">
+			<fieldset id="nameDiv" class="col-sm-7">
 			</fieldset>
 			<fieldset id="viewDiv">
 				<div id="addSongDiv">

@@ -1,7 +1,6 @@
 %burlywood{
 	background-color: burlywood;
 }
-
 .navbar-default {
 	margin: 0 20px;
 	background-color: #FFB4B0;
@@ -27,6 +26,5 @@
 
 #needMoreSongs {
 	margin: 40px 0 0 10px;
-	float: right;
 	@extend %burlywood
 }

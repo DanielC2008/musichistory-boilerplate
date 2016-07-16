@@ -21,8 +21,7 @@
   padding: 0; }
 
 #needMoreSongs {
-  margin: 40px 0 0 10px;
-  float: right; }
+  margin: 40px 0 0 10px; }
 
 .songDiv {
   margin: 20px 5px;
@@ -78,15 +77,13 @@
   padding: 0; }
 
 #needMoreSongs {
-  margin: 40px 0 0 10px;
-  float: right; }
+  margin: 40px 0 0 10px; }
 
 .options {
   height: 450px;
-  margin: 5px 15px 0 0;
+  margin: 5px 15px 0 11px;
   background-color: #4DD7FA;
-  border: 2px solid black;
-  border-box: box-sizing; }
+  border: 2px solid black; }
   .options :nth-child(n) {
     margin: 4px; }
 
@@ -106,7 +103,7 @@ fieldset {
   background-color: #FEFAC0;
   overflow: hidden;
   height: 450px;
-  margin: 4px;
+  margin: 5px 0;
   border: 2px solid black;
   border-box: box-sizing;
   padding: 0 12px; }
@@ -122,3 +119,6 @@ fieldset {
   padding: 10px;
   float: left;
   margin: 10px 85px; }
+
+.container {
+  margin: 10px; }

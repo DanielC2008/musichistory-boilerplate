@@ -16,17 +16,20 @@ function addSongs() {
 	}
 
 //songArr remains the same unless newSongArr has something in it
-function filterArtist() {
+let filterArtist = function() {
+	console.log("youclicked");
 	let newSongArr = [];
 	let newArtist = filterArr.filter((curr) => curr.artist === $("#artistSelect").val());
 	let newAlbum = filterArr.filter((curr) => curr.album === $("#albumSelect").val());
   newSongArr = newArtist.concat(newAlbum);
+  console.log(newSongArr);
   newSongArr = newSongArr.filter((curr, i, inputArr) => {
   	return inputArr.indexOf(curr) == i;
   });
   songArr = newSongArr;
+	console.log(songArr);
 	let check = newSongArr[0] !== undefined ? domHandler.displaySongs(songArr): domHandler.displaySongs(filterArr);	
-}
+};
 
 let deleteBtn = function() {
 	let arrItem = $(this).parent().attr("id").split("--")[1];
