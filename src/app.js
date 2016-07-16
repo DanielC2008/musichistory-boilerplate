@@ -3,6 +3,8 @@
 const xhr = require("./xhr");
 const domHandler = require("./domHandler");
 const manipulateSongs = require("./manipulateSongs");
+const db = require("./db_interaction");
+
 
 ///////////HANDLE VIEW///////////
 $("#viewDiv").hide();

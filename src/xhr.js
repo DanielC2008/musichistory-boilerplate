@@ -1,20 +1,20 @@
 "use strict";			
 
 const domHandler = require("./domHandler");
+const db = require("./db_interaction");
+
 let songArr = [];
 let filterArr = [];
 
-
+db.getSongs(storeSongs);
 // Create an XHR request
- $.ajax({
-   url:"songs.json" 
- }).done(storeSongs);
+ // $.ajax({
+ //   url:"songs.json" 
+ // }).done(storeSongs);
 
 //CALL MORE SONGS//////////////////////////
 function getMoreSongs() {
-	 $.ajax({
-   url:"songs2.json" 
- }).done(storeSongs);
+db.callMoreSongs(storeSongs);
 }
 
 // error
@@ -23,10 +23,10 @@ function codeError() {
 }
 
 function storeSongs(data) {
-	data.songs.forEach(function(curr) {
-		songArr.push(curr);
-		filterArr.push(curr);
-	});
+	for (let curr in data) {
+		songArr.push(data[curr]);
+		filterArr.push(data[curr]);
+	}
 	domHandler.displaySongs(songArr);
 	domHandler.filterSelect(filterArr);
 } 
