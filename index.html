@@ -4,70 +4,88 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="css/mainSASS.css">
 </head>
 
 <body>
 <!-- this is a navagation bar -->
-	<nav>
-		<ul class="nav">
-			<li id="viewMusic" class="setBar">View Music</li>
-			<li id="viewAddMusic" class="setBar">Add Music</li>
-			<!-- <li><a href="#">Profile</a></li> -->
-		</ul>
-		<button id="needMoreSongs" type="button">Need More Songs? --></button>
-	</nav>
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-default col-sm-11">
+			  <div class="container">
+				  <div class="row">
+						<div id="viewMusic" class="setBar col-sm-1">View Music</div>
+						<div id="viewAddMusic" class="setBar col-sm-1">Add Music</div>
+						<!-- <li><a href="#">Profile</a></li> -->
+						<div class="col-sm-offset-9">
+							<button id="needMoreSongs" type="button">More Songs</button>
+						</div>
+				  </div>
+			  </div>
+			</nav>
+		</div>	
+	</div>
 <!-- this is the options div for song choices -->
-	<div class="options">
-		<div>
-			<label for="Song Length">Song Length:
-				<input type="range" name="Song Length">
-			</label>
-		</div>
-		<div>
-			<label for="Artist">Artist:
-				<select id="artistSelect" name="Artist">
-					<option value="" disabled selected>Filter By Artist</option>
-				</select>
-			</label>
-		</div>
-		<div>
-			<label for="Albulm">Albulm:
-				<select id="albumSelect" name="Albulm">
-					<option value="" disabled selected>Filter By Album</option>
-				</select>
-			</label>
-		</div>
-		<div class="checkBox">
-			<p class="genre">Genre:</p>
-			<!-- for column checkboxes -->
-			<div class="checkBoxLeft"> 
-				<label><input type="checkbox" name="Genres" value="Rock">Rock</label>
-				<label><input type="checkbox" name="Genres" value="Pop">Pop</label>
-				<label><input type="checkbox" name="Genres" value="Blues">Blues</label>
+<!-- BOOTSTRAP HERE -->
+	<div class="container">
+		<div class="row">
+			<div class="options col-sm-4"> 
+				<div>
+					<label for="Song Length">Song Length:
+						<input type="range" name="Song Length">
+					</label>
+				</div>
+				<div>
+					<label for="Artist">Artist:
+						<select id="artistSelect" name="Artist">
+							<option value="" disabled selected>Filter By Artist</option>
+						</select>
+					</label>
+				</div>
+				<div>
+					<label for="Albulm">Albulm:
+						<select id="albumSelect" name="Albulm">
+							<option value="" disabled selected>Filter By Album</option>
+						</select>
+					</label>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="checkBox">
+							<p class="genre">Genre:</p>
+							<!-- for column checkboxes -->
+							<div class="checkBoxLeft col-sm-1"> 
+								<label><input type="checkbox" name="Genres" value="Rock">Rock</label>
+								<label><input type="checkbox" name="Genres" value="Pop">Pop</label>
+								<label><input type="checkbox" name="Genres" value="Blues">Blues</label>
+							</div>
+							<div class="checkBoxRight col-sm-2">	
+								<label><input type="checkbox" name="Genres" value="Classical">Classical</label>
+								<label><input type="checkbox" name="Genres" value="Jazz">Jazz</label>
+								<label><input type="checkbox" name="Genres" value="Hip Hop">Hip Hop</label>
+							</div>	
+						</div>
+					</div>
+				</div>	
+				  <div class="container">
+	  				<div class="row">
+						<button id="filterBtn"  class="col-sm-3" name="Filter">Filter</button>
+						</div>
+					</div>
 			</div>
-			<div class="checkBoxRight">	
-				<label><input type="checkbox" name="Genres" value="Classical">Classical</label>
-				<label><input type="checkbox" name="Genres" value="Jazz">Jazz</label>
-				<label><input type="checkbox" name="Genres" value="Hip Hop">Hip Hop</label>
-			</div>	
-			</label>
+			<fieldset id="nameDiv" class="col-sm-7">
+			</fieldset>
+			<fieldset id="viewDiv">
+				<div id="addSongDiv">
+					<input id="addSong" class="addInput" placeholder="Add Song">
+					<input id="addArtist" class="addInput" placeholder="Add Artist">
+					<input id="addAlbum" class="addInput" placeholder="Add Albulm">
+					<button id="add">ADD IT!</button>
+				</div>
+			</fieldset>
 		</div>
-		<div class="button">
-			<button id="filterBtn" name="Filter">Filter</button>
-		</div>
-	</div>	
-	<fieldset id="nameDiv">
-	</fieldset>
-	<fieldset id="viewDiv">
-		<div id="addSongDiv">
-			<input id="addSong" class="addInput" placeholder="Add Song">
-			<input id="addArtist" class="addInput" placeholder="Add Artist">
-			<input id="addAlbum" class="addInput" placeholder="Add Albulm">
-			<button id="add">ADD IT!</button>
-		</div>
-	</fieldset>	
-
+	</div>		
 	 
 	<script src="node_modules\jquery\dist\jquery.min.js"></script>	
 	<script src="dist/bundle.js"></script>	

@@ -1,27 +1,31 @@
-nav {
-  background-color: #FFB4B0;
-  border: 2px solid black;
-  height: 50px; }
+#needMoreSongs, .deleteButtons, #filterBtn {
+  background-color: burlywood; }
 
-.setBar:after {
-  content: "|";
-  display: inline-block;
-  margin-left: 10px; }
+.navbar-default {
+  margin: 0 20px;
+  background-color: #FFB4B0;
+  border: 2px solid black; }
+  .navbar-default .seperator {
+    display: inline-block;
+    margin: 2px 0;
+    margin-top: 45px;
+    padding: 0; }
 
 .setBar {
-  margin-left: 10px;
+  font-size: 1.5rem;
+  margin-top: 45px;
   display: inline-block;
-  float: left;
   color: blue;
   text-decoration: underline;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 0; }
 
 #needMoreSongs {
-  float: right;
-  margin-top: 5px; }
+  margin: 40px 0 0 10px; }
 
 .songDiv {
-  margin: 20px 5px; }
+  margin: 20px 5px;
+  border-bottom: 1px dashed burlywood; }
 
 .titleTrack {
   font-size: 1.5em;
@@ -42,8 +46,7 @@ nav {
   color: black; }
 
 .deleteButtons {
-  float: right;
-  color: tomato; }
+  float: right; }
 
 .addInput {
   display: inline-block;
@@ -51,38 +54,56 @@ nav {
   float: left;
   margin: 20px 45px; }
 
+#needMoreSongs, .deleteButtons, #filterBtn {
+  background-color: burlywood; }
+
+.navbar-default {
+  margin: 0 20px;
+  background-color: #FFB4B0;
+  border: 2px solid black; }
+  .navbar-default .seperator {
+    display: inline-block;
+    margin: 2px 0;
+    margin-top: 45px;
+    padding: 0; }
+
+.setBar {
+  font-size: 1.5rem;
+  margin-top: 45px;
+  display: inline-block;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0; }
+
+#needMoreSongs {
+  margin: 40px 0 0 10px; }
+
 .options {
-  background-color: #4DD7FA;
-  border: 2px solid black;
-  width: 305px;
   height: 450px;
-  margin: 4px;
-  float: left;
-  border-box: box-sizing; }
+  margin: 5px 15px 0 11px;
+  background-color: #4DD7FA;
+  border: 2px solid black; }
   .options :nth-child(n) {
-    margin: 10px; }
+    margin: 4px; }
+
+input {
+  display: inline-block; }
 
 .genre {
   display: block; }
 
-.checkBoxLeft {
+.checkBoxLeft, .checkBoxRight {
+  padding: 0;
+  height: 100px;
   margin: 10px;
-  width: 120px;
   display: inline-block; }
-
-.checkBoxRight {
-  margin: 10px;
-  width: 120px;
-  display: inline-block; }
-
-.button {
-  text-align: center; }
 
 fieldset {
   background-color: #FEFAC0;
   overflow: hidden;
   height: 450px;
-  margin: 4px;
+  margin: 5px 0;
   border: 2px solid black;
   border-box: box-sizing;
   padding: 0 12px; }
@@ -98,3 +119,6 @@ fieldset {
   padding: 10px;
   float: left;
   margin: 10px 85px; }
+
+.container {
+  margin: 10px; }
