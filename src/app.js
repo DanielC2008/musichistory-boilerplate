@@ -5,13 +5,13 @@ const domHandler = require("./domHandler");
 const manipulateSongs = require("./manipulateSongs");
 const db = require("./db_interaction");
 
-
+db.getSongs(domHandler.displaySongs);
 ///////////HANDLE VIEW///////////
 $("#viewDiv").hide();
 $("#viewAddMusic").click(domHandler.viewAddMusic);
 $("#viewMusic").click(domHandler.viewMusic);
 ///////////MORE SONGS///////////
-$("#needMoreSongs").click(xhr.getMoreSongs);
+$("#needMoreSongs").click(db.callMoreSongs);
 ///////////DELETE SONGS///////////
 $(document).on("click", ".deleteButtons", manipulateSongs.deleteBtn);
 ///////////ADD SONGS///////////

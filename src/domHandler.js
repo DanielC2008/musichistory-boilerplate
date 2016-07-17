@@ -2,17 +2,18 @@
 
 
 // output to dom
-let displaySongs = function(songArr) {
+function displaySongs(songObj) {
 	$("#nameDiv").empty();
-  songArr.forEach((currentSong, i) => {
+	let i = 0;
+  for (let curr in songObj) {
 	  $("#nameDiv").append(`<div id="curr--${i}" class="songDiv"></div>`); 
-	  $(`#curr--${i}`).append(`<h1 class="titleTrack"> ${currentSong.title} </h1>`); 
-	  $(`#curr--${i}`).append(`<h2 class="artist"> ${currentSong.artist} | </h2>`); 
-	  $(`#curr--${i}`).append(`<h2 class="album"> ${currentSong.album} | </h2>`); 
+	  $(`#curr--${i}`).append(`<h1 class="titleTrack"> ${songObj[curr].title} </h1>`); 
+	  $(`#curr--${i}`).append(`<h2 class="artist"> ${songObj[curr].artist} | </h2>`); 
+	  $(`#curr--${i}`).append(`<h2 class="album"> ${songObj[curr].album} | </h2>`); 
 	  $(`#curr--${i}`).append(`<button class="deleteButtons">Delete Song</button>`); 
-
-	});
-};
+	  i++;
+	}
+}
 
 let filterSelect = function(filterArr) {
 	$("#artistSelect").children().not(":first-child").remove();
