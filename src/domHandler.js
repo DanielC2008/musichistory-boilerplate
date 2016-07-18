@@ -3,15 +3,14 @@
 
 // output to dom
 function displaySongs(songObj) {
-	console.log(songObj);
 	$("#nameDiv").empty();
 	let i = 0;
   for (let curr in songObj) {
-	  $("#nameDiv").append(`<div id="curr--${i}" class="songDiv"></div>`); 
-	  $(`#curr--${i}`).append(`<h1 class="titleTrack"> ${songObj[curr].title} </h1>`); 
-	  $(`#curr--${i}`).append(`<h2 class="artist"> ${songObj[curr].artist} | </h2>`); 
-	  $(`#curr--${i}`).append(`<h2 class="album"> ${songObj[curr].album} | </h2>`); 
-	  $(`#curr--${i}`).append(`<button class="deleteButtons">Delete Song</button>`); 
+	  $("#nameDiv").append(`<div id="${curr}" class="songDiv"></div>`); 
+	  $(`#${curr}`).append(`<h1 class="titleTrack"> ${songObj[curr].title} </h1>`); 
+	  $(`#${curr}`).append(`<h2 class="artist"> ${songObj[curr].artist} | </h2>`); 
+	  $(`#${curr}`).append(`<h2 class="album"> ${songObj[curr].album} | </h2>`); 
+	  $(`#${curr}`).append(`<button class="deleteButtons">Delete Song</button>`); 
 	  i++;
 	}
 }

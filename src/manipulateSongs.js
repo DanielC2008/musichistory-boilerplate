@@ -1,7 +1,8 @@
 "use strict";
 	
-const xhr = require("./xhr");
-const domHandler = require("./domHandler");
+const xhr = require("./xhr"),
+      domHandler = require("./domHandler"),
+			db = require("./db_interaction");
 let filterArr = xhr.filterArr;
 let songArr = xhr.songArr;
 
@@ -32,9 +33,14 @@ let filterArtist = function() {
 };
 
 let deleteBtn = function() {
-	let arrItem = $(this).parent().attr("id").split("--")[1];
-	songArr.splice(arrItem, 1);
-	domHandler.displaySongs(songArr);	
+	let songId = $(this).parent().attr("id");
+	db.deleteSong(songId)
+	.then(function(){
+		db.callMoreSongs()
+		.then(function(songData) {
+		domHandler.displaySongs(songData);
+		});
+	});
 };
 
 
