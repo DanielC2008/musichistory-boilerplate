@@ -3,6 +3,7 @@
 
 // output to dom
 function displaySongs(songObj) {
+	console.log(songObj);
 	$("#nameDiv").empty();
 	let i = 0;
   for (let curr in songObj) {
