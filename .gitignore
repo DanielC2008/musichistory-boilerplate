@@ -2,6 +2,6 @@
 .sublime-gulp.cache 
 gulpfile.js 
 MIT.LICENSE 
-package.json
 dist/
 .sass-cache
+src/fb-getter.js

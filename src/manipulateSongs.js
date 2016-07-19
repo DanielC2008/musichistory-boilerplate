@@ -1,7 +1,8 @@
 "use strict";
 	
-const xhr = require("./xhr");
-const domHandler = require("./domHandler");
+const xhr = require("./xhr"),
+      domHandler = require("./domHandler"),
+			db = require("./db_interaction");
 let filterArr = xhr.filterArr;
 let songArr = xhr.songArr;
 
@@ -10,31 +11,48 @@ function addSongs() {
 	newSong.title = $("#addSong").val();
 	newSong.artist = $("#addArtist").val();
 	newSong.album = $("#addAlbum").val();	
-	songArr.push(newSong);
-	domHandler.displaySongs(songArr);
-	domHandler.viewMusic();
-	}
+	db.addSong(newSong)
+	.then(function() {
+		db.callMoreSongs()
+		.then(function(songData) {
+		domHandler.displaySongs(songData);
+		domHandler.viewMusic();
+		});
+	});
+}
 
 //songArr remains the same unless newSongArr has something in it
 let filterArtist = function() {
-	console.log("youclicked");
-	let newSongArr = [];
-	let newArtist = filterArr.filter((curr) => curr.artist === $("#artistSelect").val());
-	let newAlbum = filterArr.filter((curr) => curr.album === $("#albumSelect").val());
-  newSongArr = newArtist.concat(newAlbum);
-  console.log(newSongArr);
-  newSongArr = newSongArr.filter((curr, i, inputArr) => {
-  	return inputArr.indexOf(curr) == i;
-  });
-  songArr = newSongArr;
-	console.log(songArr);
-	let check = newSongArr[0] !== undefined ? domHandler.displaySongs(songArr): domHandler.displaySongs(filterArr);	
+	let filterArray = [];
+	filterArray.push($("#artistSelect").val());
+	filterArray.push($("#albumSelect").val());
+	db.filter(filterArray)
+	.then(function(songData) {
+		console.log(songData);
+	});
 };
+	// console.log("youclicked");
+	// let newSongArr = [];
+	// let newArtist = filterArr.filter((curr) => curr.artist === $("#artistSelect").val());
+	// let newAlbum = filterArr.filter((curr) => curr.album === $("#albumSelect").val());
+ //  newSongArr = newArtist.concat(newAlbum);
+ //  console.log(newSongArr);
+ //  newSongArr = newSongArr.filter((curr, i, inputArr) => {
+ //  	return inputArr.indexOf(curr) == i;
+ //  });
+ //  songArr = newSongArr;
+	// console.log(songArr);
+	// let check = newSongArr[0] !== undefined ? domHandler.displaySongs(songArr): domHandler.displaySongs(filterArr);	
 
 let deleteBtn = function() {
-	let arrItem = $(this).parent().attr("id").split("--")[1];
-	songArr.splice(arrItem, 1);
-	domHandler.displaySongs(songArr);	
+	let songId = $(this).parent().attr("id");
+	db.deleteSong(songId)
+	.then(function(){
+		db.callMoreSongs()
+		.then(function(songData) {
+		domHandler.displaySongs(songData);
+		});
+	});
 };
 
 
