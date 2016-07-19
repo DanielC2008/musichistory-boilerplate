@@ -11,10 +11,15 @@ function addSongs() {
 	newSong.title = $("#addSong").val();
 	newSong.artist = $("#addArtist").val();
 	newSong.album = $("#addAlbum").val();	
-	songArr.push(newSong);
-	domHandler.displaySongs(songArr);
-	domHandler.viewMusic();
-	}
+	db.addSong(newSong)
+	.then(function() {
+		db.callMoreSongs()
+		.then(function(songData) {
+		domHandler.displaySongs(songData);
+		domHandler.viewMusic();
+		});
+	});
+}
 
 //songArr remains the same unless newSongArr has something in it
 let filterArtist = function() {

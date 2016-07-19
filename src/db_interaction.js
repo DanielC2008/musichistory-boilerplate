@@ -25,8 +25,17 @@ function callMoreSongs() {
 	});
 }
 
-function addSong() {
-
+function addSong(newSong) {
+	return new Promise((resolve, reject) => {
+		$.ajax({
+			url: `${fbData.url}/songs.json`,
+			method: "POST",
+			data: JSON.stringify(newSong),
+			dataType: "json"
+		}).done(function(songId){
+			resolve(songId);
+		});
+	});
 }
 
 function deleteSong(songId) {
