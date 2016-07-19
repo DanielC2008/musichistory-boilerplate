@@ -48,6 +48,18 @@ function deleteSong(songId) {
 		});
 	});
 }
+/////////THIS IS NOT FUNCTOINAL, WILL FIX WITH ANGULAR/////////////
+function filter(filterArray) {
+	console.log(filterArray);
+	return new Promise((resolve, reject) => {
+			$.ajax({
+				url: `${fbData.url}/songs/.json?orderBy="$key"&equalTo="${filterArray[0]}&equalTo="${filterArray[1]}"`,
+				method: "GET"
+			}).done(function(songData) {
+			resolve(songData);
+		});
+	});		
+}
 
 
 module.exports = {
@@ -55,4 +67,5 @@ module.exports = {
 	callMoreSongs,
 	addSong,
 	deleteSong,
+	filter
 };

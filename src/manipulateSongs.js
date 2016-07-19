@@ -23,19 +23,26 @@ function addSongs() {
 
 //songArr remains the same unless newSongArr has something in it
 let filterArtist = function() {
-	console.log("youclicked");
-	let newSongArr = [];
-	let newArtist = filterArr.filter((curr) => curr.artist === $("#artistSelect").val());
-	let newAlbum = filterArr.filter((curr) => curr.album === $("#albumSelect").val());
-  newSongArr = newArtist.concat(newAlbum);
-  console.log(newSongArr);
-  newSongArr = newSongArr.filter((curr, i, inputArr) => {
-  	return inputArr.indexOf(curr) == i;
-  });
-  songArr = newSongArr;
-	console.log(songArr);
-	let check = newSongArr[0] !== undefined ? domHandler.displaySongs(songArr): domHandler.displaySongs(filterArr);	
+	let filterArray = [];
+	filterArray.push($("#artistSelect").val());
+	filterArray.push($("#albumSelect").val());
+	db.filter(filterArray)
+	.then(function(songData) {
+		console.log(songData);
+	});
 };
+	// console.log("youclicked");
+	// let newSongArr = [];
+	// let newArtist = filterArr.filter((curr) => curr.artist === $("#artistSelect").val());
+	// let newAlbum = filterArr.filter((curr) => curr.album === $("#albumSelect").val());
+ //  newSongArr = newArtist.concat(newAlbum);
+ //  console.log(newSongArr);
+ //  newSongArr = newSongArr.filter((curr, i, inputArr) => {
+ //  	return inputArr.indexOf(curr) == i;
+ //  });
+ //  songArr = newSongArr;
+	// console.log(songArr);
+	// let check = newSongArr[0] !== undefined ? domHandler.displaySongs(songArr): domHandler.displaySongs(filterArr);	
 
 let deleteBtn = function() {
 	let songId = $(this).parent().attr("id");
